@@ -1,0 +1,358 @@
+html {
+    background-color: #242726;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#myImg:hover {
+    opacity: 0.7;
+}
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: auto;
+    height: auto;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+
+.modal-content,
+#caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+/* The Close Button */
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+.collapseWrap {
+    margin-left: none;
+    padding-left: none;
+    width: 90%;
+    padding-left 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 6px;
+    width: 60%;
+    border: none;
+    text-align: left;
+    vertical-align: middle;
+    outline: none;
+    font-size: 15px;
+}
+.collapsible-text {
+    background-color: #fff;
+    color: black;
+    cursor: pointer;
+    padding: px;
+    width: 20%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+.collapse-p {
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    font-size: 2em;
+}
+.active,
+.collapsible:hover {
+    background-color: #555;
+}
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #242726;
+    width: 107%;
+}
+.construction-info {
+    color: white;
+}
+#underconstruction {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.list-item {
+    display: block;
+}
+.nurtitionFacts {
+    padding: none;
+    margin: 0;
+}
+
+/* Style the header with a grey background and some padding */
+
+.header {
+    overflow: hidden;
+    min-height: 150px;
+    background-image: url(../assets/deli.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    padding: 20px 10px;
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: inline;
+}
+
+/* Style the header links */
+
+.header a {
+    float: left;
+    color: white;
+    background-color: #242726;
+    opacity: 0.8;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Change the background color on mouse-over */
+
+.header a:hover {
+    background-color: red;
+    color: white;
+}
+
+/* Style the active/current link*/
+
+.header a.active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+/* Float the link section to the right */
+
+.header-right {
+    float: right;
+}
+#headerDisclaimer {
+    color: white;
+}
+.wouLinks {
+    display: inline;
+    margin: 0;
+    width: auto;
+}
+.wouLinksImg {
+    width: 5%;
+    height: auto;
+    display: inline;
+}
+
+/* Style the Image Used to Trigger the Modal */
+
+
+/* 100% Image Width on Smaller Screens */
+
+
+/*@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}*/
+
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+
+@media screen and (max-width: 500px) {
+    .header {
+        overflow: hidden;
+        min-height: 150px;
+        background-image: url(../assets/deli.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 200% auto;
+        padding: 20px 10px;
+    }
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .header-right {
+        float: none;
+    }
+    .collapseWrap {
+        margin-left: none;
+        padding-left: none;
+        width: 90%;
+        padding-left 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapsible {
+        background-color: #777;
+        color: white;
+        cursor: pointer;
+        padding: 6px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        vertical-align: middle;
+        outline: none;
+        font-size: 15px;
+    }
+    .collapsible-text {
+        background-color: #fff;
+        color: black;
+        cursor: pointer;
+        padding: px;
+        width: 60%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+    }
+    .collapse-p {
+        color: white;
+        padding: 0;
+        margin: 0;
+        font-weight: bold;
+        font-size: 2em;
+    }
+    .active,
+    .collapsible:hover {
+        background-color: #555;
+    }
+    .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #242726;
+        width: 107%;
+    }
+}
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+}
+iframe {
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    text-align: center;
+    width: 88.8%;
+    height: 80%;
+    padding-top: 10px;
+    overflow: scroll;
+    border: none;
+}
+#logo {
+    color: #fff;
+    font-size: 2em;
+}
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    display: inline;
+}
+.navli {
+    display: block;
+    padding: 8px;
+    background-color: #a81600;
+    display: inline;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+}
