@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/main.css">
+    <title>Western Deli</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="header">
+            <!--<a href="index.html" id="logo">Western Deli Menu</a>-->
+            <div class="header-right">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <!--<a href="pdfmenu.html">PDF Menu</a>-->
+                <!--<a href="contact.html">Contact</a>-->
+                <a class="active" href="about.html">About</a>
+            </div>
+        </div>
+        <!--<img id="underconstruction" src="assets/underconstruction.gif">-->
+        <h2 class="construction-info">Where is the Western Deli Located?</h2>
+        <p class="construction-info">We are located in the Werner University Center (WUC), past the bookstore and the art exibit.</p>
+        <!--<a href="assets/wuc-map.jpg"><img width="40%" height="auto" src="assets/wuc-map.jpg"></a>-->
+
+        <!-- Trigger the Modal -->
+        <img id="myImg" src="assets/wuc-map.jpg" alt="WUC Map" width="300" height="200">
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- The Close Button -->
+            <span class="close">&times;</span>
+
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img01">
+
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+
+        <p class="construction-info">click image to enlarge</p>
+        <br>
+        <h2 class="construction-info">When is the Western Deli open?</h2>
+        <img src="assets/deli-HOO.jpg">
+        <br>
+	<h2 class="construction-info"> Contact Information</h2>
+
+	<p class="construction-info"> Phone: 503-838-9400</p>
+	<p class="construction-info"> e-mail: dining@mail.wou.edu</p>
+    </div>
+</body>
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+</script>
+
+</html>
